@@ -4,7 +4,7 @@ const projectInfo = [
     {
         name: "Project 3",
         description: "This is the Mern project",
-        imgName: "trophy",
+        imgName: "fanjam",
         altTxt: "pic of website"
     },
     {
@@ -22,7 +22,7 @@ const projectInfo = [
     {
         name: "PWA Budget Tracker",
         description: "This is one of the homeworks I worked on in my full stack class. This budget tracker has offline functionality so you can keep track of purchases even with no internet.",
-        imgName: "pwa-tracker",
+        imgName: "pwa-budget",
         altTxt: "This is the landing page for the budget tracker."
     },
     {
@@ -34,7 +34,7 @@ const projectInfo = [
     {
         name: "placeholder",
         description: "placeholder",
-        imgName: "placeholder",
+        imgName: "fanjam",
         altTxt: "placeholder"
     }
 ]
@@ -46,7 +46,8 @@ export default function Projects() {
         <div>
     {projectInfo.map((project, i) => (
         <div className="card" style={{"width": "18rem;"}} key={i}>
-  <img src={require(`../assets/images/${project.imgName}.jpg`).default} className="card-img-top" alt={project.altTxt}/>
+  <img src={require(`../../../assets/images/${project.imgName}.png`).default} className="card-img-top" alt={project.altTxt}/>
+  <br></br>
   <div class="card-body">
     <p class="card-text">{project.description}</p>
   </div>
