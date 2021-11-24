@@ -1,5 +1,17 @@
 import React from 'react';
 
+const styles = {
+    card: {
+        padding: "50px",
+        border: "40 solid black",
+        margin: "10"
+    },
+    description: {
+        background: 'red',
+        fontSize: '3rem'
+    }
+}
+
 const projectInfo = [
     {
         name: "Project 3",
@@ -43,14 +55,14 @@ export default function Projects() {
 
     
     return (
-        <div>
+        <div style={styles.card}>
     {projectInfo.map((project, i) => (
-        <div className="card" style={{"width": "18rem;"}} key={i}>
+        <div  className="card" style={{"width": "18rem;"}} key={i}>
   <img src={require(`../../../assets/images/${project.imgName}.png`).default} className="card-img-top" alt={project.altTxt}/>
-  <br></br>
-  <div class="card-body">
+  <div style={styles.description} class="card-body">
     <p class="card-text">{project.description}</p>
   </div>
+   <br></br>
 </div>
 
 ))}
