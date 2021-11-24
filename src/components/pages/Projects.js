@@ -4,11 +4,14 @@ const styles = {
     card: {
         padding: "50px",
         border: "40 solid black",
-        margin: "10"
+        display: "inline-flex",
+        flexWrap: "wrap",
+        backgroundColor: "#ADD5F7"
     },
     description: {
-        background: 'red',
-        fontSize: '3rem'
+        background: '#16193B',
+        fontSize: '3rem',
+        color: 'white'
     }
 }
 
@@ -21,7 +24,7 @@ const projectInfo = [
     },
     {
         name: "Leverage",
-        description: "This is the second project I worked on. This is a fitness tracker that helps users keep track of the workouts they have done. This app features login verification. You can create workouts and assign them to different days as well as create exercises and assign them to the corresponding worout.",
+        description: "This is the second project I worked on. This is a fitness tracker that helps users keep track of the workouts they have done. ",
         imgName: "leverage",
         altTxt: "this is the overview page that displays the workouts and days of the week."
     },
@@ -56,16 +59,16 @@ export default function Projects() {
     
     return (
         <div style={styles.card}>
-    {projectInfo.map((project, i) => (
-        <div  className="card" style={{"width": "18rem;"}} key={i}>
-  <img src={require(`../../../assets/images/${project.imgName}.png`).default} className="card-img-top" alt={project.altTxt}/>
-  <div style={styles.description} class="card-body">
-    <p class="card-text">{project.description}</p>
-  </div>
-   <br></br>
-</div>
-
-))}
-</div>
+        {projectInfo.map((project, i) => (
+            <div style={{"margin": "1rem", "width": "34rem", "height": "40rem"}} className="card" key={i}>
+                <div style={{"height": "30rem"}} className= "imgs" >
+                <img src={require(`../../../assets/images/${project.imgName}.png`).default} className="card-img-top" alt={project.altTxt}/>
+                </div>
+                <div style={styles.description} class="card-body">
+                    <p class="card-text" style={{"font-size": "20px"}}>{project.description}</p>
+                </div>
+            </div>
+            ))}
+        </div>
     )
 };
