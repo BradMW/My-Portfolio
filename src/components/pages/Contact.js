@@ -36,7 +36,7 @@ export default function Contact() {
         <div>
     <div class="mb-3">
   <label htmlFor="exampleFormControlInput1" class="form-label">Email address</label>
-  <input value={email} name="email" onChange={handleFormChange} type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+  <input value={email} name="email" onChange={handleFormChange} type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required/>
 </div>
 <div class="mb-3">
   <label htmlFor="exampleFormControlTextarea1" class="form-label">Example textarea</label>

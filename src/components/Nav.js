@@ -7,7 +7,10 @@ const styles = {
     justifyContent: "space-evenly",
     alignItems: "center",
     fontSize: "20px",
-    backgroundColor: "#35478C"
+    backgroundColor: "#35478C",
+    position: "fixed",
+    width: "100%",
+    zIndex: "1"
   },
   tabsTxt: {
     color: "#ADD5F7"
@@ -33,7 +36,7 @@ function Nav({ currentPage, handlePageChange }) {
           onClick={() => handlePageChange('About')}
           className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
         >
-          About
+         About
         </a>
       </li>
       <li className="nav-item">
