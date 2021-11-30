@@ -18,7 +18,7 @@ const styles = {
 export default function Resume() {
 
     return(
-        <div>
+        <div style={{"position": "relative", "paddingTop": "50px"}}>
   <div class="card" style={{"width": "18rem;"}}>
   <div class="card-header" style={styles.header}>
     Languages I know

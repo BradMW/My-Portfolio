@@ -1,25 +1,26 @@
 import React, { useState } from "react";
 import { validateEmail } from '../../utils/helpers';
 
-
+const styles = {
+  email: {
+      padding: "10px"
+  }
+}
 
 export default function Contact() {
    const [email, setEmail] = useState(''); 
+   const [txtBox, setTxtBox] = useState(''); 
    const [errorMessage, setErrorMessage] = useState('');
    
     const handleFormChange=(e) => {
-        if(!validateEmail(email)){
-            return true;
-        }else {
-            return;
+      const inputType = e.target.name;
+      const inputValue = e.target.value;
+        if (inputType === 'email') {
+          setEmail(inputValue);
+        } else if (inputType === 'txtBox'){
+          setTxtBox(inputValue);
         }
-        // if(e.target.type === "email") {
-        //    let regex = /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/;
-        //    return regex.test(String(e.target.value).toLowerCase());
-        // }else {
-        //     console.log("err");
-        // }
-        
+       
     }
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -27,20 +28,24 @@ export default function Contact() {
             setErrorMessage('Email is invalid');
             return;
         }
-       setEmail(''); 
+    //     if (txtBox === ''){
+    //       setErrorMessage('Box cannot be empty')
+    //     }
+    //    setEmail(''); 
+    //    setTxtBox('');
     }
 
     
 
     return(
-        <div>
+        <div style={{"position": "relative", "padding": "50px"}}>
     <div class="mb-3">
   <label htmlFor="exampleFormControlInput1" class="form-label">Email address</label>
   <input value={email} name="email" onChange={handleFormChange} type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required/>
 </div>
 <div class="mb-3">
   <label htmlFor="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <textarea name="txtBox" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
 <button type="button" onClick={handleFormSubmit}>Submit</button>
       {errorMessage && (

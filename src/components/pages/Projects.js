@@ -7,6 +7,7 @@ const styles = {
         display: "inline-flex",
         flexWrap: "wrap",
         backgroundColor: "#ADD5F7"
+        
     },
     description: {
         background: '#16193B',
@@ -19,7 +20,7 @@ const projectInfo = [
     {
         name: "Project 3",
         description: "This is the Mern project",
-        imgName: "fanjam",
+        imgName: "coming-soon",
         altTxt: "pic of website",
         link: ""
     },
@@ -54,8 +55,8 @@ const projectInfo = [
     {
         name: "ORM E-commerce backend",
         description: "This app uses SQL and allows users to list items as well as delete them off the store page.",
-        imgName: "fanjam",
-        altTxt: "placeholder",
+        imgName: "orm-back",
+        altTxt: "This is a screenshot of the backend running",
         link: "https://drive.google.com/file/d/1jSH02Vy_bd_ZFho6GUi71A3-0BOQiAsq/view"
     }
 ]
@@ -66,10 +67,10 @@ export default function Projects() {
     return (
         <div style={styles.card}>
         {projectInfo.map((project, i) => (
-            <div style={{"margin": "1rem", "width": "34rem", "height": "40rem"}} className="card" key={i}>
+            <div style={{"margin": "1rem", "width": "34rem", "height": "40rem", "boxShadow": "0px 0px 24px 2px #16193B"}} className="card" key={i}>
                 <div style={{"height": "30rem"}} className= "imgs" >
                <a href={project.link} target="_blank" rel="noreferrer">
-                <img src={require(`../../../assets/images/${project.imgName}.png`).default} className="card-img-top" alt={project.altTxt}/>
+                <img src={require(`../../images/${project.imgName}.png`).default} className="card-img-top" alt={project.altTxt}/>
                </a>
                 </div>
                 <div style={styles.description} class="card-body">
