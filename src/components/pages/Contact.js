@@ -54,13 +54,13 @@ export default function Contact() {
 //   </p>
 // </form>
     // </div>
-        <div style={{"position": "relative", "padding": "50px", "backgroundColor": "#ADD5F7"}}>
+        <div style={{"position": "relative", "padding": "50px", "paddingTop": "100px", "backgroundColor": "#ADD5F7"}}>
     <div class="mb-3">
   <label htmlFor="exampleFormControlInput1" class="form-label">Email address</label>
   <input value={email} name="email" onChange={handleFormChange} type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required/>
 </div>
 <div class="mb-3">
-  <label htmlFor="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <label htmlFor="exampleFormControlTextarea1" class="form-label">Enter your message</label>
   <textarea name="txtBox" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
 <button type="button" onClick={handleFormSubmit}>Submit</button>

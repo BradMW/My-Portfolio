@@ -7,7 +7,7 @@ const styles = {
         backgroundColor: "#ADD5F7",
         display: "grid",
         gridRow: "2/3",
-        gridColumn: "2/3",
+        gridColumn: "2/3"
        
     },
     description: {
@@ -15,7 +15,6 @@ const styles = {
         fontSize: '1rem',
         color: 'white',
         padding: '5px'
-        
     }
 }
 
