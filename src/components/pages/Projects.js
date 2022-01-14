@@ -18,11 +18,11 @@ const styles = {
 
 const projectInfo = [
     {
-        name: "Project 3",
-        description: "This is the Mern project",
-        imgName: "coming-soon",
-        altTxt: "pic of website",
-        link: ""
+        name: "In The Loop",
+        description: "The third group project I worked on. This is a workbook designed for mobile devices. In the loop help users learn how to use for loops.",
+        imgName: "in-the-loop",
+        altTxt: "This is a screen shot of the login page.",
+        link: "https://intheloop-app.herokuapp.com/"
     },
     {
         name: "Leverage",
