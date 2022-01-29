@@ -36,7 +36,7 @@ const projectInfo = [
         description: "This is the first project I worked on. FanJam is an app that lets you search up your favorite artist and see the lyrics to their songs as well as see any upcoming events featuring them!",
         imgName: "fanjam",
         altTxt: "This is a screen shot of the FanJam home page.",
-        link: "https://bradmw.github.io/FanJam-Project-1/"
+        link: "https://bradmw.github.io/FanJam/"
     },
     {
         name: "PWA Budget Tracker",
