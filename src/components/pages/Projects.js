@@ -18,6 +18,13 @@ const styles = {
 
 const projectInfo = [
     {
+        name: "Hair by Donna",
+        description: "This is a website I am making for a salon owner. It features photos of their work, the salon location and a list of services to choose from. Currently a work in progress.",
+        imgName: "Hair-by-Donna",
+        altTxt: "This is a screen shot of the Gallery page with photos of different hair styles.",
+        link: "https://github.com/BradMW/Hair-by-Donna"
+    },
+    {
         name: "In The Loop",
         description: "This is a workbook designed for mobile devices. In the loop help users learn how to use for loops. Built using React, Express, GraphQL, Bcrypt and MUI.",
         imgName: "in-the-loop",
